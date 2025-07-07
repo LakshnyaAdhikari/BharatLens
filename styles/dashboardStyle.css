@@ -1,0 +1,363 @@
+:root {
+  --bg-color: #121212;
+  --sidebar-bg: #1a1a1a;
+  --widget-bg: #1e1e1e;
+  --text-primary: #ffffff;
+  --text-secondary: #b3b3b3;
+  --accent-green: #29b474;
+  --accent-yellow: #f5b945;
+  --accent-red: #d9534f;
+  --border-radius: 12px;
+}
+/*For links*/
+a:link {
+  color: #90d5ff; /* Before visiting */
+}
+
+a:visited {
+  color: purple; /* After visiting */
+}
+
+a:hover {
+  color: green; /* When hovering */
+}
+
+a:active {
+  color: blue; /* While clicking */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  padding: 24px;
+}
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 48px);
+}
+
+/* --- Header --- */
+.dashboard-header {
+  padding-right: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  border-radius: 10px;
+}
+
+.header-title-group {
+  display: flex;
+  align-items: center;
+  gap: 16px; /* Space between logo and text */
+}
+
+.header-logo {
+  height: 45px; /* Control the size of the logo */
+  width: auto;
+  border-radius: 10px;
+}
+
+.dashboard-header h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.header-icons {
+  display: flex;
+  gap: 20px;
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+}
+
+/* --- Main Layout --- */
+.main-content {
+  display: flex;
+  flex-grow: 1;
+  gap: 24px;
+  padding-top: 24px;
+}
+
+/* --- Sidebar --- */
+.sidebar {
+  background-color: var(--sidebar-bg);
+  border-radius: var(--border-radius);
+  padding: 16px;
+  width: 250px;
+  flex-shrink: 0;
+}
+
+.sidebar nav ul {
+  list-style: none;
+}
+
+.sidebar nav li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.sidebar nav li.active,
+.sidebar nav li:hover {
+  background-color: var(--text-primary);
+  color: var(--bg-color);
+}
+
+.sidebar nav li i {
+  font-size: 1.2rem;
+  width: 20px;
+  text-align: center;
+}
+
+/* --- Content Area --- */
+.content-area {
+  flex-grow: 1;
+}
+
+.widget-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(384px, 2fr));
+  gap: 24px;
+}
+
+.widget {
+  background-color: var(--widget-bg);
+  border-radius: var(--border-radius);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.widget h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+/* --- Specific Widget Styles --- */
+
+/* Alerts Widget */
+.alerts-widget .alerts-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.alerts-widget .alert-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.alerts-widget .alert-icon-bg {
+  background-color: var(--accent-red);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+.alerts-widget .alert-info p {
+  font-weight: 600;
+}
+.alerts-widget .alert-info p span {
+  font-size: 1.5rem;
+  margin-right: 5px;
+}
+
+/* Gauge Meter */
+.gauge-container {
+  width: 160px;
+  height: 80px;
+  position: relative;
+  overflow: hidden;
+}
+.gauge {
+  width: 100%;
+  height: 100%;
+  background: conic-gradient(
+    from 180deg,
+    var(--accent-green),
+    var(--accent-yellow) 72%,
+    #333 72%
+  );
+  border-radius: 160px 160px 0 0;
+}
+.gauge::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 0;
+  background: var(--widget-bg);
+  border-radius: 120px 120px 0 0;
+}
+.gauge-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  line-height: 1;
+}
+.gauge-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.gauge-label {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Trust Score Widget */
+.trust-score-widget {
+  justify-content: center;
+}
+.trust-score-widget .score-display {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.trust-score-widget .score-display i {
+  font-size: 2rem;
+  color: var(--accent-red);
+}
+.trust-score-widget .status-text {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--accent-red);
+  letter-spacing: 1px;
+}
+.trust-score-widget .confidence-text {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+/* Deepfake Detection Widget */
+.deepfake-widget .deepfake-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: auto;
+}
+.deepfake-widget .profile-pic {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+}
+.deepfake-widget .detection-status {
+  flex-grow: 1;
+  background-color: var(--accent-green);
+  border-radius: var(--border-radius);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 8px;
+  height: 120px;
+}
+.deepfake-widget .detection-status i {
+  font-size: 1.5rem;
+}
+.deepfake-widget .detection-status p {
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* Social Media Widget */
+.social-media-widget .sub-header {
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin-bottom: -5px;
+}
+.social-media-widget ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: auto;
+}
+.social-media-widget li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-secondary);
+}
+.social-media-widget li span:first-child {
+  width: 80px;
+}
+.social-media-widget li span:last-child {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+/* IP Tracing Widget */
+.ip-tracing-widget .ip-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+.ip-tracing-widget .ip-content p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+.ip-tracing-widget .map-placeholder {
+  width: 100px;
+  height: 70px;
+  background-color: #2b7d6a;
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.ip-tracing-widget .map-placeholder i {
+  color: var(--accent-yellow);
+  font-size: 1.5rem;
+}
+.ip-tracing-widget .map-placeholder span {
+  font-weight: 600;
+}
+
+/* Compliance Widget */
+.compliance-widget {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-align: left;
+}
+.compliance-widget i {
+  font-size: 4rem;
+  color: var(--accent-green);
+}
+.compliance-widget p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+}

@@ -1,0 +1,199 @@
+/* --- Base Styles & Variables --- */
+:root {
+  --primary-color: #007bff;
+  --primary-hover-color: #0056b3;
+  --background-color: #121212;
+  --card-background-color: #1e1e1e;
+  --text-color: #fff6f6;
+  --input-border-color: #dce1e6;
+  --input-focus-border-color: #007bff;
+  --link-color: #007bff;
+  --separator-color: #e0e0e0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* --- Login Container & Form --- */
+.login-container {
+  background-color: var(--card-background-color);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+.login-form h1 {
+  margin: 0 0 10px;
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.login-form p {
+  margin-bottom: 30px;
+  text-align: center;
+  color: #666;
+}
+
+/* --- Input Fields --- */
+.input-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--input-border-color);
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: var(--input-focus-border-color);
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+.input-group input::placeholder {
+  color: #a0a0a0;
+}
+
+.password-toggle-icon {
+  position: absolute;
+  top: 42px;
+  right: 15px;
+  cursor: pointer;
+  user-select: none; /* Prevents text selection */
+  color: #888;
+}
+
+/* --- Options (Remember Me / Forgot Password) --- */
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.remember-me input {
+  margin-right: 8px;
+}
+
+.forgot-password {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+/* --- Buttons --- */
+.login-button {
+  width: 100%;
+  padding: 15px;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-button:hover {
+  background-color: var(--primary-hover-color);
+}
+
+/* --- Separator --- */
+.separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 25px 0;
+  color: #aaa;
+}
+
+.separator hr {
+  flex: 1;
+  border: none;
+  border-top: 1px solid var(--separator-color);
+}
+
+.separator span {
+  padding: 0 15px;
+  font-size: 14px;
+}
+
+/* --- Social Sign-in --- */
+.google-signin-button {
+  width: 100%;
+  padding: 12px;
+  background-color: white;
+  border: 1px solid var(--input-border-color);
+  border-radius: 8px;
+  color: black;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.google-signin-button:hover {
+  background-color: #f9f9f9;
+  border-color: #ccc;
+}
+
+.google-signin-button img {
+  width: 20px;
+  height: 20px;
+}
+
+/* --- Sign-up Link --- */
+.signup-link {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 14px;
+}
+
+.signup-link a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}

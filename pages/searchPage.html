@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BharatLens - Intelligence Dashboard</title>
+    <link rel="icon" type="image/jpeg" href="../images/logo.jpeg" />
+    <link rel="stylesheet" href="../styles/searchPageStyle.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <!-- Header -->
+      <header class="dashboard-header">
+        <div class="header-title-group">
+          <img
+            src="../images/logo.jpeg"
+            alt="BharatLens Logo"
+            class="header-logo"
+          />
+          <h1>BharatLens</h1>
+        </div>
+        <div class="search-bar">
+            <input type="text" name="query" placeholder="Search..." />
+            <button type="submit">Submit</button>
+        </div>
+        <div class="header-icons">
+          <i class="fa-solid fa-shield-halved" title="Authorized Access"></i>
+          <i class="fa-solid fa-user"></i>
+        </div>
+      </header>
+      <div class="main-content">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+          <nav>
+            <ul>
+              <li onclick="window.location.href='dashboard.html'">
+                <i class="fa-solid fa-grip"></i><span>Dashboard</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-user-secret"></i
+                ><span>Deepfake Detection</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-location-dot"></i><span>IP Tracing</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-language"></i
+                ><span>Language Analysis</span>
+              <li class="active">
+                <i class="fa-brands fa-searchengin"></i
+                ><span>Search User</span>
+              </li>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+    </div>
+    
+  </body>
+</html>

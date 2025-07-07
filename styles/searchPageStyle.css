@@ -1,0 +1,154 @@
+:root {
+  --bg-color: #121212;
+  --sidebar-bg: #1a1a1a;
+  --widget-bg: #1e1e1e;
+  --text-primary: #ffffff;
+  --text-secondary: #b3b3b3;
+  --accent-green: #29b474;
+  --accent-yellow: #f5b945;
+  --accent-red: #d9534f;
+  --border-radius: 12px;
+}
+/*For links*/
+a:link {
+  color: #90d5ff; /* Before visiting */
+}
+
+a:visited {
+  color: purple; /* After visiting */
+}
+
+a:hover {
+  color: green; /* When hovering */
+}
+
+a:active {
+  color: blue; /* While clicking */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  padding: 24px;
+}
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 48px);
+}
+
+/* --- Header --- */
+.dashboard-header {
+  padding-right: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  border-radius: 10px;
+}
+
+.header-title-group {
+  display: flex;
+  align-items: center;
+  gap: 16px; /* Space between logo and text */
+}
+
+.header-logo {
+  height: 45px; /* Control the size of the logo */
+  width: auto;
+  border-radius: 10px;
+}
+
+.dashboard-header h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.header-icons {
+  display: flex;
+  gap: 20px;
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+}
+
+/* --- Main Layout --- */
+.main-content {
+  display: flex;
+  flex-grow: 1;
+  gap: 24px;
+  padding-top: 24px;
+}
+/*------Search Bar------*/
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: 500px;
+  margin: 10px auto;
+  background-color: rgb(139, 135, 128);
+  border-radius: 25px;
+  padding: 5px 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input[type='text'] {
+  flex: 1;
+  border: none;
+  background: none;
+  padding: 10px;
+  font-size: 14px;
+  outline: none;
+}
+
+.search-bar button {
+  background-color: #1a1a1a;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+/* --- Sidebar --- */
+.sidebar {
+  background-color: var(--sidebar-bg);
+  border-radius: var(--border-radius);
+  padding: 16px;
+  width: 250px;
+  flex-shrink: 0;
+}
+
+.sidebar nav ul {
+  list-style: none;
+}
+
+.sidebar nav li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.sidebar nav li.active,
+.sidebar nav li:hover {
+  background-color: var(--text-primary);
+  color: var(--bg-color);
+}
+
+.sidebar nav li i {
+  font-size: 1.2rem;
+  width: 20px;
+  text-align: center;
+}

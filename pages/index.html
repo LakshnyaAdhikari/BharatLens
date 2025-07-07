@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BharatLens - Intelligence Dashboard</title>
+    <link rel="icon" type="image/jpeg" href="../images/logo.jpeg">
+    <link rel="stylesheet" href="../styles/dashboardStyle.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <!-- Header -->
+      <header class="dashboard-header">
+        <div class="header-title-group">
+          <img
+            src="../images/logo.jpeg"
+            alt="BharatLens Logo"
+            class="header-logo"
+          />
+          <h1>BharatLens – Intelligence Dashboard</h1>
+        </div>
+        <div class="header-icons">
+          <i class="fa-solid fa-shield-halved" title="Authorized Access"></i>
+          <i class="fa-solid fa-user"></i>
+        </div>
+      </header>
+
+      <div class="main-content">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+          <nav>
+            <ul>
+              <li class="active">
+                <i class="fa-solid fa-grip"></i><span>Dashboard</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-user-secret"></i
+                ><span>Deepfake Detection</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-location-dot"></i><span>IP Tracing</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-language"></i
+                ><span>Language Analysis</span>
+              <li onclick="window.location.href='searchPage.html'">
+                <i class="fa-brands fa-searchengin" ></i
+                ><span>Search User</span>
+              </li>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+
+        <!-- Main Dashboard Area -->
+        <main class="content-area">
+          <div class="widget-grid">
+            <!-- Alerts Widget -->
+            <div class="widget alerts-widget">
+              <h3>Alerts</h3>
+              <div class="alerts-content">
+                <div class="alert-info">
+                  <div class="alert-icon-bg">
+                    <i class="fa-solid fa-bell"></i>
+                  </div>
+                  <p><span>3</span> ACTIVE</p>
+                </div>
+                <div class="gauge-container">
+                  <div class="gauge"></div>
+                  <div class="gauge-content">
+                    <span class="gauge-value">72</span>
+                    <span class="gauge-label">SUSPICIOUS</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Trust Score Widget -->
+            <div class="widget trust-score-widget">
+              <h3>Trust Score</h3>
+              <div class="score-display">
+                <i class="fa-solid fa-xmark"></i>
+                <span class="status-text">SUSPICIOUS</span>
+              </div>
+              <p class="confidence-text">Confidence: 94%</p>
+            </div>
+
+            <!-- Deepfake Detection Widget -->
+            <div class="widget deepfake-widget">
+              <h3>Deepfake Detection</h3>
+              <div class="deepfake-content">
+                <img
+                  src="../images/profile.png"
+                  alt="Man's face for deepfake detection"
+                  class="profile-pic"
+                />
+                <div class="detection-status">
+                  <i class="fa-solid fa-check"></i>
+                  <p>NO<br />MANIPULATION<br />DETECTED</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Media Footprint Widget -->
+            <div class="widget social-media-widget">
+              <h3>Social Media Footprint</h3>
+              <p class="sub-header">Public Activity</p>
+              <ul>
+                <li>
+                  <span>02:03 PM</span> Public source <span>Twitter</span>
+                </li>
+                <li>
+                  <span>08:44 AM</span> Public source <span>Facebook</span>
+                </li>
+                <li>
+                  <span>Yesterday</span> Public source <span>Reddit</span>
+                </li>
+              </ul>
+              <a href="www.google.com" target="_blank">
+                <p>view more</p>
+              </a>
+            </div>
+
+            <!-- IP Tracing Widget -->
+            <div class="widget ip-tracing-widget">
+              <h3>IP Tracing</h3>
+              <div class="ip-content">
+                <p>Traced IP: 203.0.113.42</p>
+                <div class="map-placeholder">
+                  <i class="fa-solid fa-map-location-dot"></i>
+                  <span>New Delhi</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Compliance Widget -->
+            <div class="widget compliance-widget">
+              <i class="fa-solid fa-circle-check"></i>
+              <p>PDPPA 2023<br />COMPLIANT</p>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
