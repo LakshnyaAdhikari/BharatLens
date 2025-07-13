@@ -9,21 +9,21 @@
   --accent-red: #d9534f;
   --border-radius: 12px;
 }
-
+/*For links*/
 a:link {
-  color: #90d5ff; 
+  color: #90d5ff; /* Before visiting */
 }
 
 a:visited {
-  color: purple; 
+  color: purple; /* After visiting */
 }
 
 a:hover {
-  color: green; 
+  color: green; /* When hovering */
 }
 
 a:active {
-  color: blue; 
+  color: blue; /* While clicking */
 }
 
 * {
@@ -45,7 +45,7 @@ body {
   height: calc(100vh - 48px);
 }
 
-
+/* --- Header --- */
 .dashboard-header {
   padding-right: 10px;
   display: flex;
@@ -58,11 +58,11 @@ body {
 .header-title-group {
   display: flex;
   align-items: center;
-  gap: 16px; 
+  gap: 16px; /* Space between logo and text */
 }
 
 .header-logo {
-  height: 45px; 
+  height: 45px; /* Control the size of the logo */
   width: auto;
   border-radius: 10px;
 }
@@ -79,14 +79,14 @@ body {
   color: var(--text-secondary);
 }
 
-
+/* --- Main Layout --- */
 .main-content {
   display: flex;
   flex-grow: 1;
   gap: 24px;
   padding-top: 24px;
 }
-
+/*------Search Bar------*/
 .search-bar {
   display: flex;
   align-items: center;
@@ -117,7 +117,7 @@ body {
   transition: background 0.3s;
 }
 
-
+/* --- Sidebar --- */
 .sidebar {
   background-color: var(--sidebar-bg);
   border-radius: var(--border-radius);

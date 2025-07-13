@@ -1,4 +1,4 @@
-
+/* --- Base Styles & Variables --- */
 :root {
   --primary-color: #007bff;
   --primary-hover-color: #0056b3;
@@ -22,7 +22,7 @@ body {
   min-height: 100vh;
 }
 
-
+/* --- Login Container & Form --- */
 .login-container {
   background-color: var(--card-background-color);
   padding: 40px;
@@ -46,7 +46,7 @@ body {
   color: #666;
 }
 
-
+/* --- Input Fields --- */
 .input-group {
   margin-bottom: 20px;
   position: relative;
@@ -83,11 +83,11 @@ body {
   top: 42px;
   right: 15px;
   cursor: pointer;
-  user-select: none; 
+  user-select: none; /* Prevents text selection */
   color: #888;
 }
 
-
+/* --- Options (Remember Me / Forgot Password) --- */
 .options {
   display: flex;
   justify-content: space-between;
@@ -115,7 +115,7 @@ body {
   text-decoration: underline;
 }
 
-
+/* --- Buttons --- */
 .login-button {
   width: 100%;
   padding: 15px;
@@ -133,7 +133,7 @@ body {
   background-color: var(--primary-hover-color);
 }
 
-
+/* --- Separator --- */
 .separator {
   display: flex;
   align-items: center;
@@ -153,7 +153,7 @@ body {
   font-size: 14px;
 }
 
-
+/* --- Social Sign-in --- */
 .google-signin-button {
   width: 100%;
   padding: 12px;
@@ -181,7 +181,7 @@ body {
   height: 20px;
 }
 
-
+/* --- Sign-up Link --- */
 .signup-link {
   text-align: center;
   margin-top: 25px;
