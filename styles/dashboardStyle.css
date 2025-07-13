@@ -9,21 +9,21 @@
   --accent-red: #d9534f;
   --border-radius: 12px;
 }
-/*For links*/
+
 a:link {
-  color: #90d5ff; /* Before visiting */
+  color: #90d5ff; 
 }
 
 a:visited {
-  color: purple; /* After visiting */
+  color: purple; 
 }
 
 a:hover {
-  color: green; /* When hovering */
+  color: green; 
 }
 
 a:active {
-  color: blue; /* While clicking */
+  color: blue; 
 }
 
 * {
@@ -45,7 +45,7 @@ body {
   height: calc(100vh - 48px);
 }
 
-/* --- Header --- */
+
 .dashboard-header {
   padding-right: 10px;
   display: flex;
@@ -58,11 +58,11 @@ body {
 .header-title-group {
   display: flex;
   align-items: center;
-  gap: 16px; /* Space between logo and text */
+  gap: 16px; 
 }
 
 .header-logo {
-  height: 45px; /* Control the size of the logo */
+  height: 45px; 
   width: auto;
   border-radius: 10px;
 }
@@ -79,7 +79,7 @@ body {
   color: var(--text-secondary);
 }
 
-/* --- Main Layout --- */
+
 .main-content {
   display: flex;
   flex-grow: 1;
@@ -87,7 +87,7 @@ body {
   padding-top: 24px;
 }
 
-/* --- Sidebar --- */
+
 .sidebar {
   background-color: var(--sidebar-bg);
   border-radius: var(--border-radius);
@@ -123,7 +123,7 @@ body {
   text-align: center;
 }
 
-/* --- Content Area --- */
+
 .content-area {
   flex-grow: 1;
 }
@@ -149,9 +149,9 @@ body {
   color: var(--text-secondary);
 }
 
-/* --- Specific Widget Styles --- */
 
-/* Alerts Widget */
+
+
 .alerts-widget .alerts-content {
   display: flex;
   align-items: center;
@@ -182,7 +182,7 @@ body {
   margin-right: 5px;
 }
 
-/* Gauge Meter */
+
 .gauge-container {
   width: 160px;
   height: 80px;
@@ -229,7 +229,7 @@ body {
   letter-spacing: 1px;
 }
 
-/* Trust Score Widget */
+
 .trust-score-widget {
   justify-content: center;
 }
@@ -253,7 +253,7 @@ body {
   color: var(--text-secondary);
 }
 
-/* Deepfake Detection Widget */
+
 .deepfake-widget .deepfake-content {
   display: flex;
   align-items: center;
@@ -287,7 +287,7 @@ body {
   line-height: 1.3;
 }
 
-/* Social Media Widget */
+
 .social-media-widget .sub-header {
   color: var(--text-secondary);
   font-weight: 500;
@@ -314,7 +314,7 @@ body {
   font-weight: 500;
 }
 
-/* IP Tracing Widget */
+
 .ip-tracing-widget .ip-content {
   display: flex;
   justify-content: space-between;
@@ -344,7 +344,7 @@ body {
   font-weight: 600;
 }
 
-/* Compliance Widget */
+
 .compliance-widget {
   display: flex;
   align-items: center;
